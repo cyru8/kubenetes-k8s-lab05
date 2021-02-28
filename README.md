@@ -51,7 +51,7 @@ The Ingress controllers are deployed in a familiar fashion to other Kubernetes o
 The status can be identified using kubectl get deployment -n nginx-ingress
 
 
-#############################################
+######
 
 
 Step 3 - Deploy Ingress Rules
@@ -87,5 +87,24 @@ As with all Kubernetes objects, they can be deployed via kubectl create -f ingre
 
 Once deployed, the status of all the Ingress rules can be discovered via kubectl get ing
 
-#######################################
+######
+
+Step 4 - Test
+
+
+With the Ingress rules applied, the traffic will be routed to the defined place.
+
+The first request will be processed by the webapp1 deployment.
+
+curl -H "Host: my.kubernetes.example" 172.17.0.38/webapp1
+
+The second request will be processed by the webapp2 deployment.
+
+curl -H "Host: my.kubernetes.example" 172.17.0.38/webapp2
+
+Finally, all other requests will be processed by webapp3 deployment.
+
+curl -H "Host: my.kubernetes.example" 172.17.0.38
+
+######
 
