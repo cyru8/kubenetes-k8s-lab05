@@ -1,4 +1,5 @@
 # kubenetes-k8s-lab05
+<<<<<<< HEAD
 Create Ingress Routing
 
 Kubernetes have advanced networking capabilities that allow Pods and Services to communicate inside the cluster's network. An Ingress enables inbound connections to the cluster, allowing external traffic to reach the correct Pod.
@@ -32,3 +33,5 @@ Task
 The Ingress controllers are deployed in a familiar fashion to other Kubernetes objects with kubectl create -f ingress.yaml
 
 The status can be identified using kubectl get deployment -n nginx-ingress
+=======
+>>>>>>> 48ff2e6b2dd710e8fe4b662de0cc2f2bc000e9e2
